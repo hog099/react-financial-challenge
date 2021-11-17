@@ -1,70 +1,115 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h2  align="center">
+<img  alt="cover-alt"  src=".github/preview.png" />
+</h2>
 
-## Available Scripts
+  
+<p  align="center">
+<a  href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a  href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a  href="#-scripts">Scripts</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a  href="#-orientações">Orientações</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a  href="#-licença">Licença</a>
+</p>
 
-In the project directory, you can run:
+  
 
-### `yarn start`
+## 💻 Projeto
+  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Este projeto é uma aplicação ReactJS desafio para listagem de dados em endpoint, formatacao e contextos;
+Inspirado em um projeto das trilhas da [Rocketseat](https://www.rocketseat.com.br/).
+  
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🧪 Tecnologias
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+O projeto foi desenvolvido usando as seguintes tecnologias:
 
-### `yarn build`
+  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [React](https://reactjs.org)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [Styled-Components](https://styled-components.com)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [Axios](https://axios-http.com)
 
-### `yarn eject`
+- [MirageJS](https://miragejs.com)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 📝 Scripts
+Instale as dependências.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
 
-## Learn More
+$ yarn
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  
+Para executar o projeto rode o comando abaixo.
 
-### Code Splitting
+```bash
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+$ yarn start 
 
-### Analyzing the Bundle Size
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📝 Orientações
 
-### Making a Progressive Web App
+O projeto possui integrado o mirageJS, então ao startar o mesmo, estará disponível os endpoints para utilização.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+##### Listagem de Transações
+```js
 
-### Advanced Configuration
+GET: {{baseurl}}/api/transactions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```
 
-### Deployment
+##### Salvar transação
+```js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+POST: {{baseurl}}/api/transactions
+body:{
+    title: string,
+    amount: number,
+    category: string
+    type: string
+}
 
-### `yarn build` fails to minify
+```
+## #Desafios a serem feitos
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+##### #01 Home ‘./src/pages/home’ 
+Implementar ações de mostrar e ocultar modal
+    
+
+##### #02 Contexto ‘.src/contexts/useTransactions’
+Implementar captação de listagem dos registros e salvar no estado do contexto, utilizar requisição na api (mockup api do  miragejs), conforme endpoint acima, pasta './src/services' ja possui o agente para requisição.
+    
+
+##### #03 Modal ‘./src/components/NewTransactionModal’
+Implementar ação do submit do formulário para cadastrar a operação, fechar modal após submit
+    
+
+##### #04 Contexto ‘.src/contexts/useTransactions’
+Implementar a criação da transação vinda do submit do form no modal, utilizar requisicao na api (mockup api do  miragejs), conforme endpoint acima, pasta './src/services' já possui o agente para requisição.
+    
+
+##### #05 Componente de listagem ‘./src/components/ListRegisters’ 
+Formatar valor e data, colocar coluna de valor e data nas cores verde ou vermelhor conforme tipo de operação, observar a classe do <td/> e ajustar no css.
+    
+
+    
+
+## 📝 Licença 
+ 
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for details.
+
+  ---
+
+
+<p  align="center">Made with 💜 by <a  href="https://github.com/hog099"  target="_blank">Hudson Oliveira</a></p>
